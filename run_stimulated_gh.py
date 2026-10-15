@@ -4,10 +4,9 @@ run_stimulated.py
 Stimulated dynamics study.
 
 During the first T_STIM steps the 22 left boundary field-grid-points receive
-an oscillatory signal (mirrored to the right half inside step()), matching the
-mechanism used in train_cfn_mod.py forward().
+an oscillatory signal (mirrored to the right half inside step())
 
-Signal formula (consistent with forward() in train_cfn_mod.py):
+Signal formula:
     signal_left[t, k] = amp[k] * cos(freq[k] * t + phase[k])
     where t = linspace(0, 0.5, T_STIM)   (no 2*pi factor)
 
@@ -73,11 +72,6 @@ signal_left = amp.unsqueeze(0) * torch.cos(
     )
 
 
-
-# -----------------------------------------------------------------------
-# Helper: run a stimulated simulation using step(v_left_22=...)
-# Identical logic to forward() in train_cfn_mod.py, but stores all frames.
-# -----------------------------------------------------------------------
 def run_stimulated(net, T, T_stim, sig_left, save_every=1):
     """
     T        : total steps
