@@ -1,7 +1,7 @@
 """
 intervento_saturazione.py
 =========================
-Test per INTERVENTO dell'ipotesi della Sez. 42.1: la dimensione della nuvola
+Test per INTERVENTO: la dimensione della nuvola
 segue la frazione di conduttanze interne (gradi di liberta' attivi).
 
 """
