@@ -29,10 +29,6 @@ T_DRIVE_END  = 0.5
 V_HYP_TH = -40e-3
 V_DEP_TH = -20e-3
 
-# Target del paper
-# NON coincidono con E_p / E_d: il valore iperpolarizzato (-60 mV) sta oltre
-# l'equilibrio bistabile del modello (~-50 mV), quindi il target e'
-# irraggiungibile per costruzione e la loss ha un pavimento non nullo.
 TARGET_HYP = -60.0e-3
 TARGET_DEP =  -9.2e-3
 V_MID      = 0.5 * (TARGET_HYP + TARGET_DEP)
