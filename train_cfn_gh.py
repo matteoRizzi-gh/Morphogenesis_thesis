@@ -1,30 +1,3 @@
-"""
-train_cfn.py  —  VERSIONE ALLINEATA AL CODICE UFFICIALE
-========================================================
-Rispetto al train_cfn della tua cartella:
-
-MECCANISMO
-1. forward() chiama net.step(),
-   (eV dalle sole celle -> Gp -> Vmem; poi, sotto clamp, eV[bordo] imposto
-   + contributo additivo ai punti liberi -> Gp -> Vmem).
-
-PARAMETRI ALLINEATI AL CODICE UFFICIALE
-2. E_p = -55 mV 
-3. target = -60 / -9.2 mV invece di E_p / E_d
-4. loss di default = 'globalsum' 
-5. lr di default = 0.01 
-
-NON allineati:
-   - B del mosaic = 0.02        
-   - B dello stigmergico = 5e-4 
-   - range di amp e freq, e assenza di clipping su amp/freq
-     (gli autori usano amp in (-1,1) e freq in (100,1000), entrambi ritagliati)
-
-ALTRO
-6. Tutti gli output (.pt e .png) vanno in OUTPUT_DIR.
-
-"""
-
 import os
 import math
 import numpy as np
